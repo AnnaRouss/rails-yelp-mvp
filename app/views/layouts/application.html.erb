@@ -21,4 +21,9 @@
 </nav>
     <%= yield %>
   </body>
+  <% flash.each do |name, msg| %>
+  <div class="alert alert-<%= name == "notice" ? "success" : "danger" %>">
+    <%= msg %>
+  </div>
+<% end %>
 </html>
